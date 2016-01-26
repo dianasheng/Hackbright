@@ -2,7 +2,7 @@
 # These are useful for describing difficult code or adding reminders.
 # TODO - fix this code :D
 
-float(bill) = raw_input("How much was your bill?")
+bill = raw_input("How much was your bill?")
 
 tip = bill * .18
 
