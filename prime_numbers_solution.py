@@ -1,7 +1,7 @@
 def is_prime(number):
     for i in range(2, number):
         if number % i == 0:
-            flag = False
+            return False
     return True
 
 input_number = int(raw_input("Enter a number to check if it's prime. "))
