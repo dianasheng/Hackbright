@@ -1,6 +1,6 @@
 from Tkinter import *
 '''
-Tkinter GUI Exercise 1
+Exercise 2 - Make TKinter GUI into a class
 '''
 
 class AppWindow(object):
