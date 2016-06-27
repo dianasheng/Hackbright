@@ -48,7 +48,7 @@ def main():
     dict_by_item = sort_dict_by_item(file_word_count_dict)
 
     write_to_file(dict_by_key, OUTPUT_FILE_NAME)
-    #write_to_file(dict_by_item, OUTPUT_FILE_NAME)
+    write_to_file(dict_by_item, OUTPUT_FILE_NAME)
 
 
 if __name__ == "__main__":
