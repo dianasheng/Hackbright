@@ -57,14 +57,18 @@ def write_to_file():
             count += 1
 
 
-def read_from_file():  # what if there is no file or an empty file
-    with open(FILE_NAME) as list_file:
+def read_file_to_list(file_name):
+    with open(file_name) as list_file:
         new_list = list_file.readlines()  # returns a list each line is an item
-        for item in new_list:
-            item = item.strip()
-            split_string_list = item.split(",")
-        global shopping_list  # we have to specify the global variable shopping_list
-        shopping_list = split_string_list  # otherwise a new local one is created
+    return new_list
+
+
+def process_file_list(file_list):
+    for item in file_list:
+        item = item.strip()
+        split_string_list = item.split(",")
+    global shopping_list  # we have to specify the global variable shopping_list
+    shopping_list = split_string_list  # otherwise a new local one is created
 
 
 def exit_handler():
@@ -83,7 +87,8 @@ def menu_choice():
 
 
 def main():
-    read_from_file()
+    file_list = read_file_to_list(FILE_NAME)
+    process_file_list(file_list)
     choice = menu_choice()
 
     while True:
