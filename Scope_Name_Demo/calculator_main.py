@@ -59,5 +59,5 @@ def main():
 
 
 if __name__ == "__main__":
-    print __name__
+    print "Show the __name__ of this calculator_main.py module.", __name__
     main()

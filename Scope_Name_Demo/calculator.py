@@ -29,7 +29,7 @@ def power(base, exponent):
 def square(num1):
     return num1 ** 2
 
-print __name__
+print "Show the __name__ of this calculator.py module.", __name__
 # TEST FUNCTIONS
 # (4+5) + (9-6)
 print add(add(4, 5), subtract(9, 6))

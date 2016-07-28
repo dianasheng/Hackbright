@@ -1,10 +1,13 @@
 """
 Demo to show how adding a main() function makes a module reusable.
+Comment out each of the import statements below to see how __name__ is different.
+Notice how reusable each module is.
+
 """
 from calculator import *  # uses file without main() function
-#from calculator_main.py import * # uses file without main() function
+# from calculator_main import *  # uses file without main() function
 
-print __name__
+print "Show the __name__ of this test_demo.py module.", __name__
 
 # (4+5) + (9-6)
 print add(add(4, 5), subtract(9, 6))
@@ -29,4 +32,3 @@ print subtract(add(1, 2), multiply(3, add(4, 5)))
 
 # 3^(2+3)
 print power(3, add(2, 3))
-
