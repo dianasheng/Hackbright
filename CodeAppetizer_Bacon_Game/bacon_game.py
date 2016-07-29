@@ -25,7 +25,8 @@ def eat_bacon():
     print "Eat Some Bacon!"
 
 
-def should_you_eat_bacon():
+def main():
+    # Decide if you should eat bacon.
     input_string = "Do you want to feel like angels are frolicking on your taste buds?" \
                    + "\n" + "1 - yes" + "\n" + "2 - no" + "\n" + "3 - yes, but I'm afraid it will kill me."
 
@@ -35,4 +36,4 @@ def should_you_eat_bacon():
 
 
 if __name__ == '__main__':
-    should_you_eat_bacon()
+    main()
