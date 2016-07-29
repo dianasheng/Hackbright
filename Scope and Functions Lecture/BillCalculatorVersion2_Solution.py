@@ -16,28 +16,31 @@ def calculate_bill(bill_amount, tip_percentage = 18, split_number = 1):
     global split_bill
     split_bill = total_bill / split_number
 
+def main():
+    calculate_bill(100)
+    print "original bill is 100"
+    print "tip amount", tip_amount
+    print "total bill", total_bill
+    print "split amount", split_bill
 
-calculate_bill(100)
-print "original bill is 100"
-print "tip amount", tip_amount
-print "total bill", total_bill
-print "split amount", split_bill
+    calculate_bill(100, tip_percentage=20)
+    print "original bill is 100"
+    print "tip amount", tip_amount
+    print "total bill", total_bill
+    print "split amount", split_bill
+
+    calculate_bill(100, split_number=4)
+    print "original bill is 100"
+    print "tip amount", tip_amount
+    print "total bill", total_bill
+    print "split amount", split_bill
+
+    calculate_bill(100, 20, 3)
+    print "original bill is 100"
+    print "tip amount", tip_amount
+    print "total bill", total_bill
+    print "split amount", split_bill
 
 
-calculate_bill(100, tip_percentage=20)
-print "bill is 100"
-print "tip amount", tip_amount
-print "total bill", total_bill
-print "split amount", split_bill
-
-calculate_bill(100, split_number=4)
-print "bill is 100"
-print "tip amount", tip_amount
-print "total bill", total_bill
-print "split amount", split_bill
-
-calculate_bill(100, 20, 3)
-print "bill is 100"
-print "tip amount", tip_amount
-print "total bill", total_bill
-print "split amount", split_bill
+if __name__ == "__main__":
+    main()
