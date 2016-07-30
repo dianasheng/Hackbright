@@ -7,10 +7,6 @@ Make sure your code deals with upper and lower case.
 shopping_list = []
 
 
-def reassign_list(list):
-    shopping_list = list
-    return shopping_list
-
 def add_shopping_list(item):
     item = item.lower()
     if item not in shopping_list:
@@ -36,21 +32,24 @@ def remove_item(item):
     return sorted_shopping_list()
 
 
-print reassign_list(["Apple", "Orange"])
-print sorted_shopping_list()
+def main():
 
-# TEST FUNCTIONS
-# 1 - add 4 times to your shopping list
-print add_shopping_list("apple")
-print add_shopping_list("steak")
-print add_shopping_list("beef")
-print add_shopping_list("mustard")
+    # TEST FUNCTIONS
+    # 1 - add 4 times to your shopping list
+    print add_shopping_list("apple")
+    print add_shopping_list("steak")
+    print add_shopping_list("beef")
+    print add_shopping_list("mustard")
 
-# 2 - Add an item that is already in the list. what happens?
-print add_shopping_list("apple")
+    # 2 - Add an item that is already in the list. what happens?
+    print add_shopping_list("apple")
 
-# 3 - Remove an item on your list
-print remove_item("apple")
+    # 3 - Remove an item on your list
+    print remove_item("apple")
 
-# 4 - Remove an item that is not in the list. what happens?
-print remove_item("chicken")
+    # 4 - Remove an item that is not in the list. what happens?
+    print remove_item("chicken")
+
+
+if __name__ == "__main__":
+    main()
