@@ -4,7 +4,7 @@ Code Workshop - Dictionary Shopping list.
 This program will do the following.
 0 - Main Menu
 1 - Show all lists.
-2 - Show a specific list. 
+2 - Show a specific list.
 3 - Add a new shopping list.
 4 - Add an item to a shopping list.
 5 - Remove an item from a shopping list.
