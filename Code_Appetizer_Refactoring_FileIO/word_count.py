@@ -1,7 +1,7 @@
 import string
 import collections
 
-INPUT_FILE_NAME = "TestFile.txt"
+INPUT_FILE_NAME = "Budget.txt"
 OUTPUT_FILE_NAME = "wordcount.txt"
 
 

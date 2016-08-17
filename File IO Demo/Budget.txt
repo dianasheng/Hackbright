@@ -1,0 +1,5 @@
+grocery - 400.00
+rent - 2570.00
+car - 200
+dining out - 250.00
+travel - 250.00
