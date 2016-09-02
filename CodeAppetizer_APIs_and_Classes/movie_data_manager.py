@@ -1,16 +1,15 @@
 '''
 movie_data_manager is a data layer that can be used with a UI layer
 It uses the SF Open Data API.
-Author: Diana Sheng
+
 '''
 from urllib2 import urlopen
 from json import load
 from movie_info import *
 
-movie_list = []
-
 
 def load_movie_data():
+    movie_list = []
     #sf open data source: film location in sf
     apiUrl = "https://data.sfgov.org/resource/wwmu-gmzc.json"
 
@@ -47,7 +46,7 @@ def load_movie_data():
     return movie_list
 
 
-def get_movie_info_by_year(year):
+def get_movie_info_by_year(year, movie_list):
     movie_list_by_year = []
     for info in movie_list:
         if info.release_year == year:
@@ -55,7 +54,7 @@ def get_movie_info_by_year(year):
     return movie_list_by_year
 
 
-def get_release_year_list():
+def get_release_year_list(movie_list):
     year_list = []
     for info in movie_list:
         year_list.append(info.release_year)
@@ -66,11 +65,8 @@ def get_release_year_list():
     return new_list
 
 
-def main():
-    # test above functions
-    load_movie_data()
-
-    # print out the movies in the list
+def display_movie_info_list(movie_list):
+        # print out the movies in the list
     for info in movie_list:
         print "title - " + info.title
         print "director - " + info.director
@@ -79,8 +75,15 @@ def main():
         print "actor2 - " + info.actor_2
         print "location - " + info.location
 
-    print get_release_year_list()
-    print get_movie_info_by_year('2000')
+
+def main():
+    # test above functions
+    movie_list = load_movie_data()
+    display_movie_info_list(movie_list)
+    print get_release_year_list(movie_list)
+    list_2000 = get_movie_info_by_year('2000', movie_list)
+    display_movie_info_list(list_2000)
+
 
 if __name__ == "__main__":
     main()

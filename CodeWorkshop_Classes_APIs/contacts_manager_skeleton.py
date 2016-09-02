@@ -18,7 +18,7 @@ def add_new_contact():
     pass
 
 
-def edit_exiting_contact():
+def edit_existing_contact():
     pass
 
 

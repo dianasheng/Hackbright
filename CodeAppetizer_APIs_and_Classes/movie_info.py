@@ -1,5 +1,5 @@
 class MovieInfo(object):
-    def __init__(self, director='', release_year ='', title='', actor_1='', actor_2='', location=''):
+    def __init__(self, director='', release_year='', title='', actor_1='', actor_2='', location=''):
         self.director = director
         self.release_year = release_year
         self.title = title
