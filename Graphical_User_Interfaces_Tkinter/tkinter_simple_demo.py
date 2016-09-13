@@ -21,15 +21,16 @@ entry_text.insert(0, "Type here please.")   # text to display on start up
 entry_text.pack()                           # show the entry box
 
 
-# def set_text():
-#     var_label_text.set(entry_text.get())
-
+def set_text():
+    var_label_text.set(entry_text.get())
 # create a button
 # command sets a function to run when the button is CLICKED. AKA as an event and callback
 # command expects the NAME of the function not to call it.
-btn_ok = Button(text='Ok', command=lambda: var_label_text.set(entry_text.get()))
-#btn_ok = Button(text='Ok', command=set_text)
+#btn_ok = Button(text='Ok', command=lambda: var_label_text.set(entry_text.get()))
+btn_ok = Button(text='Ok', command=set_text)
 btn_ok.pack()
+
+
 
 
 # runs the window in a loop so it continuously detects the button click event
